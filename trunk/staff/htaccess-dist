@@ -1,0 +1,4 @@
+AuthUserFile .licpasswd
+AuthName "Licenses - Staff View"
+AuthType Basic
+require user admin staff
