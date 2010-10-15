@@ -89,13 +89,14 @@ label.text_pa{
 }
 /* License Browse Styling */
 #license-form div{
-    position:relative;
-    width:100%;
+    /*position:relative;
+    width:100%;*/
+    text-align:center;
 }
 #license-form label{
-    position:absolute;
+/*    position:absolute;
     top:6px;
-    left:175px;
+    left:175px;*/
     color:#666;
 }
 #license-form input{
@@ -103,7 +104,7 @@ label.text_pa{
     width: 600px;
     margin: 20px auto;
     border: 2px solid #ddd;
-    display:block;
+/*    display:block;*/
 }
 #license-form input:focus{
     border-color:#900;
@@ -134,7 +135,7 @@ label.text_pa{
 }
 #LibraryContent .license-table td,
 #LibraryContent .license-table th{
-		vertical-align:middle;
+	vertical-align:middle;
     padding:10px 15px;
 }
 .case{
