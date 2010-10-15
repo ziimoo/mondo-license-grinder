@@ -260,7 +260,7 @@ class LicensePDO extends PDO{
 	public function findAsYouType($fragment){
 		$stmt=&$this->preparedStatement(
 				'findAsYouType',
-				"SELECT `id` as value, `title` as label FROM `record` WHERE `title` LIKE :like LIMIT 12"
+				"SELECT `id` as value, `title` as label FROM `record` WHERE `title` LIKE :like ORDER BY `title` LIMIT 12"
 			);
 		$stmt->execute(array(':like'=>"%$fragment%"));
 		$data=$stmt->fetchAll(PDO::FETCH_ASSOC);
