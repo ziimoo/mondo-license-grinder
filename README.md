@@ -1,18 +1,23 @@
-Mondo License Grinder v.0.3+, UBC Custom Edition
+Modified version of Mondo License Grinder
 
-Notes
+# Modifications
+1.
+
+## Mondo License Grinder v.0.3+, UBC Custom Edition
+
+### Notes
 -----
 The author makes no claim that this is an innovative or complex solution; 
 rather this is a pure CRUD (Create/Report/Update/Delete) application. All it
 does is provide an interface to a simple database. It doesn't connect to an 
 ERM, or pull in license data from a publisher, or anything cool like that.
 
-Requirements
+### Requirements
 ------------
 MySQL 5+
 PHP 5.1+
 
-Installation notes
+### Installation notes
 ------------------
 
 There isn't any interactive installation script. So:
