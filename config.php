@@ -11,7 +11,7 @@ define('DOCSTORE','/path/to/licensedocs');
 // e.g. head -c 32 /dev/urandom > cryptkey
 // This is used to encrypt license documents
 // NB. if you change the contents of this file, any previously stored docs will be unreadable
-define('DOCKEY', 'asdasd adasda asdasd adasd adsadas'));
+define('DOCKEY', 'asdasd adasda asdasd adasd adsadas');
 //trailing slash needed
 define('BASE_URL','http://mondo-thinkingbase.rhcloud.com/');
 
