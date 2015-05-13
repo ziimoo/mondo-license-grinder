@@ -1,0 +1,4 @@
+AuthUserFile .licpasswd
+AuthName "Licenses - Administration"
+AuthType Basic
+require user admin

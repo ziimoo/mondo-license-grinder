@@ -1,6 +1,0 @@
-<Location "/secure">
-    AuthType basic
-    AuthName "Licenses - Administration"
-    AuthUserFile .licpasswd
-    Require            admin
-</Location>
