@@ -1,4 +1,6 @@
-AuthUserFile .licpasswd
-AuthName "Licenses - Administration"
-AuthType Basic
-require user admin
+<Location "/secure">
+    AuthType basic
+    AuthName "Licenses - Administration"
+    AuthUserFile .licpasswd
+    Require            admin
+</Location>
