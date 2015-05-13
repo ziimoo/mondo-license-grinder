@@ -534,7 +534,7 @@ class LicensePDO extends PDO{
 
 
 try{
-	$dsn = DBTYPE.':dbname='.DBNAME.';host='.DBHOST;
+	$dsn = DBTYPE.':dbname='.DBNAME.';port='.DBPORT.';host='.DBHOST;
 	$db = new LicensePDO($dsn,DBUSER,DBPASS);
 }catch(PDOException $e){
 	die('DB Connect fail: '.$e->getMessage());

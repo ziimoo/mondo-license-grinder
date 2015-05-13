@@ -1,6 +1,7 @@
 <?php
 define('DBTYPE','mysql');
 define('DBHOST', $OPENSHIFT_MYSQL_DB_HOST);
+define('DBPORT', $OPENSHIFT_MYSQL_DB_PORT);
 define('DBUSER','admin8hZBFZs');
 define('DBPASS','IJkM3P1gItbg');
 define('DBNAME','mondo');
