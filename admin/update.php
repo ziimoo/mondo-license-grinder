@@ -29,6 +29,8 @@ $title=trim(pv('title'));
 //$tag=trim(pv('tag'));
 $tag=rawurlencode($title);
 
+var_dump($tag);
+
 $e_reserves=pv('e_reserves',0);
 $handouts=pv('handouts',2);
 $images=pv('images',2);
