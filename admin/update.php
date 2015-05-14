@@ -25,7 +25,10 @@ if(isset($_POST['newconsortium']) && $consortiumname=trim($_POST['newconsortium'
 	$consortium=$_POST['consortium'];
 }
 $title=trim(pv('title'));
-$tag=trim(pv('tag'));
+
+//$tag=trim(pv('tag'));
+$tag=rawurlencode($title);
+
 $e_reserves=pv('e_reserves',0);
 $handouts=pv('handouts',2);
 $images=pv('images',2);
