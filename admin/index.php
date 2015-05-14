@@ -243,7 +243,7 @@ $addform
 		<input type="hidden" name="id" value="$id" />
 		<label for="tag" class="desc">License URL</label>
 		<label for="tag">$baseurl</label>
-		<input name="tag" id="tag" class="field" type="text" size="100" value="$tag" title="short name for use in a URL" />
+		<input disabled name="tag" id="tag" class="field" type="text" size="100" value="$tag" title="short name for use in a URL" />
 		<br />
 		$preview $publink $stafflink
 		</fieldset>
