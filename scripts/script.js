@@ -17,7 +17,6 @@ function string_to_underscore_name(title)
 	var result = title.replace(/[\'"]/g, '');
 	result = result.replace(/[^a-zA-Z0-9]+/g, '_');
 	result = result.trim('_');
-	result = result.toLowerCase();
 
 	return result;
 }
@@ -35,7 +34,7 @@ $(document).ready(function(){
 			$(this).parents("td").find("div").hide();
 	});
 
-	$("#title").change(function(){
+	$("#title").keyup(function(){
 		$('#tag').val(string_to_underscore_name($('#title').val()));
 	});
 });

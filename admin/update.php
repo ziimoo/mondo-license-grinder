@@ -6,7 +6,6 @@ function string_to_underscore_name($string)
     $string = preg_replace('/[\'"]/', '', $string);
     $string = preg_replace('/[^a-zA-Z0-9]+/', '_', $string);
     $string = trim($string, '_');
-    $string = strtolower($string);
 
     return $string;
 }
