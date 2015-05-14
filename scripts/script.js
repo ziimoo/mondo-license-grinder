@@ -13,7 +13,6 @@ $(function(){
 
 function string_to_underscore_name(title)
 {
-	console.log(title);
 	var result = title.replace(/[\'"]/g, '');
 	result = result.replace(/[^a-zA-Z0-9]+/g, '_');
 	result = result.trim('_');
