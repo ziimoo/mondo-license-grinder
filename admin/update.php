@@ -1,4 +1,16 @@
 <?php
+
+// http://www.dzone.com/snippets/convert-string-underscorename
+function string_to_underscore_name($string)
+{
+    $string = preg_replace('/[\'"]/', '', $string);
+    $string = preg_replace('/[^a-zA-Z0-9]+/', '_', $string);
+    $string = trim($string, '_');
+    $string = strtolower($string);
+
+    return $string;
+}
+
 //exit();
 include('../db.inc.php');
 if(!$_POST){
@@ -27,9 +39,7 @@ if(isset($_POST['newconsortium']) && $consortiumname=trim($_POST['newconsortium'
 $title=trim(pv('title'));
 
 //$tag=trim(pv('tag'));
-$tag=rawurlencode($title);
-
-var_dump($tag);
+$tag=string_to_underscore_name($title);
 
 $e_reserves=pv('e_reserves',0);
 $handouts=pv('handouts',2);

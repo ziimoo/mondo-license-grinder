@@ -11,6 +11,23 @@ $(function(){
 });
 })(jQuery);
 
+function string_to_underscore_name(title)
+{
+	title.replace('/[\'"]/', '');
+	title.replace('/[\'"]/', '');
+	title.trim('_');
+	title.toLowerCase();
+
+	/*
+	$string = preg_replace(, $string);
+	$string = preg_replace('/[^a-zA-Z0-9]+/', '_', $string);
+	$string = trim($string, '_');
+	$string = strtolower($string);
+	*/
+
+	return title;
+}
+
 $(document).ready(function(){
   //for fading Public search label
 	$("#license-form label").inFieldLabels({ fadeOpacity:0 });
@@ -22,5 +39,9 @@ $(document).ready(function(){
 		},
 		function(){
 			$(this).parents("td").find("div").hide();
+	});
+
+	$("#title").change(function(){
+		$(this).val = string_to_underscore_name($(this).val);
 	});
 });
