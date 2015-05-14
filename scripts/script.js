@@ -13,19 +13,13 @@ $(function(){
 
 function string_to_underscore_name(title)
 {
-	title.replace('/[\'"]/', '');
-	title.replace('/[\'"]/', '');
-	title.trim('_');
-	title.toLowerCase();
+	console.log(title);
+	var result = title.replace(/[\'"]/g, '');
+	result = result.replace(/[^a-zA-Z0-9]+/g, '_');
+	result = result.trim('_');
+	result = result.toLowerCase();
 
-	/*
-	$string = preg_replace(, $string);
-	$string = preg_replace('/[^a-zA-Z0-9]+/', '_', $string);
-	$string = trim($string, '_');
-	$string = strtolower($string);
-	*/
-
-	return title;
+	return result;
 }
 
 $(document).ready(function(){
@@ -42,6 +36,6 @@ $(document).ready(function(){
 	});
 
 	$("#title").change(function(){
-		$(this).val = string_to_underscore_name($(this).val);
+		$('#tag').val(string_to_underscore_name($('#title').val()));
 	});
 });
