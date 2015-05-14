@@ -20,6 +20,6 @@ echo '
 
 	<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 
-	<h1>Title</h1>
+	<h1>Test</h1>
 
 ';
