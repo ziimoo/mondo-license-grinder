@@ -1,7 +1,9 @@
 ## Modified version of Mondo License Grinder
 
 ## Modifications
-Should be listed below in summary form
+- Automatically fills in url tags based on title
+- Resolves both decoded and encoded tags
+- uses uikit for better interface
 
 ### Mondo License Grinder v.0.3+, UBC Custom Edition
 
