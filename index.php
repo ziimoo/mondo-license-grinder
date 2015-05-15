@@ -32,13 +32,19 @@ if (is_numeric($tag)) {
     exit();
 }
 
-var_dump($tag);
-$data=$db->getLicenseData(string_to_underscore_name($tag));
-if (!$data) {
-    $msg = "No license found for '$tag'.";
-    include('browse.php');
+$expected_tag = string_to_underscore_name($tag);
+if($expected_tag != $tag){
+	header('Location: ' . BASE_URL . $expected_tag);
     exit();
+} else {
+	$data = $db->getLicenseData($tag);
+	if (!$data) {
+		$msg = "No license found for '$tag'.";
+		include('browse.php');
+		exit();
+	}
 }
+
 extract($data);
 $ill_any=max($ill_print,$ill_ariel,$ill_electronic);
 $nyaill_any='No';
