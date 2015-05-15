@@ -31,6 +31,8 @@ if (is_numeric($tag)) {
     }
     exit();
 }
+
+var_dump($tag);
 $data=$db->getLicenseData(string_to_underscore_name($tag));
 if (!$data) {
     $msg = "No license found for '$tag'.";
