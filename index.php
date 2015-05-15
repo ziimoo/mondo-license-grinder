@@ -1,4 +1,15 @@
 <?php
+
+// http://www.dzone.com/snippets/convert-string-underscorename
+function string_to_underscore_name($string)
+{
+    $string = preg_replace('/[\'"]/', '', $string);
+    $string = preg_replace('/[^a-zA-Z0-9]+/', '_', $string);
+    $string = trim($string, '_');
+
+    return $string;
+}
+
 include('db.inc.php');
 if (!isset($_GET['tag'])) {
     include('browse.php');
@@ -20,7 +31,7 @@ if (is_numeric($tag)) {
     }
     exit();
 }
-$data=$db->getLicenseData($tag);
+$data=$db->getLicenseData(string_to_underscore_name($tag));
 if (!$data) {
     $msg = "No license found for '$tag'.";
     include('browse.php');
